@@ -14,17 +14,18 @@
      <div class="container" ng-controller="LunchCheckController">
        <h1>Lunch Checker</h1>
 
-           <div class="form-group">
+           <div class="form-group {{listClass}}">
              <!-- empty items not considered-->
                <input id="lunch-menu" type="text"
                placeholder="list comma separated dishes you usually have for lunch"
                class="form-control"
-               ng-model="txtEntered">
+               ng-model="txtEntered"
+               >
            </div>
            <div class="form-group">
                <button ng-click="getStatus()" class="btn btn-default">Check If Too Much</button>
            </div>
-           <div class="form-group message">
+           <div class="form-group message {{msgClass}}">
              <!-- Your message can go here. -->
              {{msg}}
            </div>
